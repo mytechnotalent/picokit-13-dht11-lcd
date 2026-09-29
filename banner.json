@@ -1,0 +1,68 @@
+{
+  "repo": "picokit-13-dht11-lcd",
+  "eyebrow": "PICOKIT // LESSON 13",
+  "title": "PICOKIT // DHT11 LCD",
+  "subtitle": "DHT11 ON THE 1602 I2C LCD + AUTHENTICATED HEARTBEAT",
+  "accent": "#FF5224",
+  "dim": "#9E3216",
+  "white": "#F3DEE0",
+  "cyan": "#7FD8E0",
+  "bg": "#110502",
+  "bg_edge": "#050100",
+  "icon": "lcd",
+  "panel_status": "T 23.0 C  ·  H 61.0 %  ·  AEAD :ON",
+  "chips": [
+    {
+      "label": "LCD",
+      "value": "0x27"
+    },
+    {
+      "label": "SDA",
+      "value": "GP2"
+    },
+    {
+      "label": "KEY",
+      "value": "argon2id"
+    },
+    {
+      "label": "RADIO",
+      "value": "-35 dBm"
+    }
+  ],
+  "terminal": [
+    "$ gateway listen /dev/cu.usbserial-A50285BI",
+    "[*] node 00013  seq 18  HEARTBEAT  AEAD ok",
+    "[*] anti-replay window ok  counter 18",
+    "[+] lcd T 23.0 C  H 61.0 %  onboard blink",
+    "[+] ack sent  rssi -35  snr 9.0"
+  ],
+  "categories": [
+    "LCD",
+    "TWOWIRE",
+    "SECURE",
+    "LINK"
+  ],
+  "cards": [
+    {
+      "tag": "LINE-01",
+      "label": "temperature",
+      "value": "tenths"
+    },
+    {
+      "tag": "LINE-02",
+      "label": "humidity",
+      "value": "tenths"
+    },
+    {
+      "tag": "BUS-01",
+      "label": "i2c1",
+      "value": "100 kHz"
+    }
+  ],
+  "footer": [
+    "1 NODE  ·  1 GATEWAY  ·  2 WAY LORA  ·  NO PLAINTEXT",
+    "PICOKIT SERIES  ·  OUTPUT  ·  INPUT  ·  RADIO  ==[ LCD ]=="
+  ],
+  "layout": "terminal",
+  "stat": "0x27"
+}
